@@ -34,12 +34,12 @@ func main() {
 
 func bruteforceNum(num *big.Int) *big.Int {
 	start := time.Now()
-	numString := fmt.Sprintf("%d", num)
+	//numString := fmt.Sprintf("%d", num)
 	n := big.NewInt(0)
 	oneBigInt := big.NewInt(1)
 	for {
-		nString := fmt.Sprintf("%d", n)
-		if numString != nString {
+		// nString := fmt.Sprintf("%d", n)
+		if n.Cmp(num) != 0 {
 			n.Add(n, oneBigInt)
 		} else {
 			break
